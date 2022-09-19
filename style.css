@@ -1,0 +1,54 @@
+* {
+  font-family: "Saira", sans-serif;
+}
+.main {
+  display: flex;
+}
+.headline {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  float: left;
+  width: 11%;
+  height: 8%;
+  border-radius: 43px;
+  padding: 0rem 3rem 0rem 2rem;
+}
+.filter {
+  display: block;
+  width: 16rem;
+}
+.orderlist {
+  background-color: #fff9f9;
+  padding-top: 5rem;
+}
+table{
+  background-color: yellow;
+}
+
+th {
+  color: black;
+  background-color: lightgray;
+}
+
+td {
+  text-align: center;
+  background-color: lightgreen;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+#pagelog {
+  display: inline;
+}
+
+#count {
+  display: -webkit-inline-box;
+}
+
+#table{
+  margin: 1rem 0rem 0rem 0rem;
+}
