@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--custom-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="style.scss" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="nav nav-pills col-12">
+                <a class="nav-link active" aria-current="page" href="#index">Index</a>
+                <a class="nav-link" href="#list">Auftragsliste</a>
+
+                <form class="d-inline-flex mr-2 mx-auto">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+
+                <div id="time" class="col-2 bg-dark text-white fw-bold rounded-pill border" />
+            </nav>
+        </div>
+
+        <h2 id="index">Index</h2>
+        <div class="row mt-3">
+            <div id="page">
+                <label id="count">Page(s) printed: </label>
+                <button button type="button" class="btn btn-secondary btn-sm pl-1" onclick="incCount()">
+                    Increase Pages
+                </button>
+                <div class="row mt-2 d-flex justify-content-between">
+                    <i class="fa fa-info-circle"> </i>
+                    <div id="pagelog"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="list">List</h2>
+    <table class="table table-hover table-sm table-striped">
+        <thead>
+            <tr class="font-weight-bold">
+                <th id="th0" scope="col"></th>
+                <th id="th1" scope="col"></th>
+                <th id="th2" scope="col"></th>
+                <th id="th3" scope="col"></th>
+                <th id="th4" scope="col"></th>
+                <th id="th5" scope="col"></th>
+                <th id="th6" scope="col"></th>
+                <th id="th7" scope="col"></th>
+                <th id="th8" scope="col"></th>
+                <th id="th9" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td id="td1" scope="row">Mark</td>
+                <td id="td2" scope="row">Mark</td>
+                <td id="td3" scope="row">Mark</td>
+                <td id="td4" scope="row">Mark</td>
+                <td id="td5" scope="row">Mark</td>
+                <td id="td6" scope="row">Mark</td>
+                <td id="td7" scope="row">Mark</td>
+                <td id="td8" scope="row">Mark</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td id="td1" scope="row">Mark</td>
+                <td id="td2" scope="row">Mark</td>
+                <td id="td3" scope="row">Mark</td>
+                <td id="td4" scope="row">Mark</td>
+                <td id="td5" scope="row">Mark</td>
+                <td id="td6" scope="row">Mark</td>
+                <td id="td7" scope="row">Mark</td>
+                <td id="td8" scope="row">Mark</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td id="td1" scope="row">Mark</td>
+                <td id="td2" scope="row">Mark</td>
+                <td id="td3" scope="row">Mark</td>
+                <td id="td4" scope="row">Mark</td>
+                <td id="td5" scope="row">Mark</td>
+                <td id="td6" scope="row">Mark</td>
+                <td id="td7" scope="row">Mark</td>
+                <td id="td8" scope="row">Mark</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const tableHeader = ["Printer", "User", "JobID", "Timestamp", "No. of Sheets", "Job-Billing", "Host-Name", "Doc-Name"];
+
+        //selectTextHTML(th1, fruits[0]);
+        document.getElementById("th1").innerHTML = tableHeader[0];
+        document.getElementById("th2").innerHTML = tableHeader[1];
+        document.getElementById("th3").innerHTML = tableHeader[2];
+        document.getElementById("th4").innerHTML = tableHeader[3];
+        document.getElementById("th5").innerHTML = tableHeader[4];
+        document.getElementById("th6").innerHTML = tableHeader[5];
+        document.getElementById("th7").innerHTML = tableHeader[6];
+        document.getElementById("th8").innerHTML = tableHeader[7];
+        document.getElementById("time").innerHTML = getCurrentTime();
+        document.getElementById("pagelog").innerHTML = checkPagelog();;
+    </script>
+
+    <!-- <div class="topnav">
+        <div class="nav">
+            
+            <a href="index.html?page=index" class="active" href="#index">Index</a>
+            <a href="index.html?page=orderlist">Auftragsliste</a>
+        </div>
+        <input type="text" placeholder="Filter.."> </input>
+        <label id="count">Page(s) printed: <div id="pages"></div>
+         </label>
+        <button type="button" onclick="incCount()"> </button>
+        <br>
+        <i class="fa fa-info-circle"> </i>
+        <div id="pagelog"></div>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
